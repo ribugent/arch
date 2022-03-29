@@ -45,8 +45,8 @@ jobs:
 
       - name: Copying packages
         run: |
-          (cp ${{github.event.inputs.package}}/*-x86_64.pkg.tar.zst packages/x86_64 || 1) \
-          && (cp ${{github.event.inputs.package}}/-any.pkg.tar.zst packages/x86_64 || 1) \
+          (cp ${{github.event.inputs.package}}/*-x86_64.pkg.tar.zst packages/x86_64 || true) \
+          && (cp ${{github.event.inputs.package}}/*-any.pkg.tar.zst packages/x86_64 || true) \
 
       - name: Updating packages database
         run: |
