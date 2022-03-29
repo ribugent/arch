@@ -12,7 +12,8 @@ jobs:
     name: Build package ${{github.event.inputs.package}}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Check out PKGBUILD's
+        uses: actions/checkout@v2
         with:
           persist-credentials: false
 
@@ -28,3 +29,32 @@ jobs:
       - name: Building package
         run: |
           docker exec -i -w /build/${{github.event.inputs.package}} build makepkg -s --noconfirm -f
+
+      - name: Stopping container
+        if: always()
+        run: |
+          docker stop build || exit 0
+
+      - name: Check out packages
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: true
+          ref: packages
+          path: packages
+
+      - name: Copying packages
+        run: |
+          (cp ${{github.event.inputs.package}}/*-x86_64.pkg.tar.zst packages/x86_64 || 1) \
+          && (cp ${{github.event.inputs.package}}/-any.pkg.tar.zst packages/x86_64 || 1) \
+
+      - name: Updating packages database
+        run: |
+          cd packages/x86_64 \
+          && repo-add ribugent.db.tar.xz *.pkg.tar.zst
+
+      - name: "Committing packages"
+        run: |
+          cd packages \
+          && git add . \
+          && git commit -m "Update packages" \
+          && git push origin packages
