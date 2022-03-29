@@ -28,7 +28,7 @@ jobs:
 
       - name: Building package
         run: |
-          docker exec -i -w /build/${{github.event.inputs.package}} build makepkg -s --noconfirm -f
+          docker exec -i -u nobody -w /build/${{github.event.inputs.package}} build makepkg -s --noconfirm -f
 
       - name: Stopping container
         if: always()
