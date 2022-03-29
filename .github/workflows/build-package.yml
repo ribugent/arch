@@ -31,11 +31,6 @@ jobs:
           chmod 777 ${{github.event.inputs.package}}
           docker exec -i -u nobody -w /build/${{github.event.inputs.package}} build makepkg -s --noconfirm -f
 
-      - name: Stopping container
-        if: always()
-        run: |
-          docker stop build || exit 0
-
       - name: Check out packages
         uses: actions/checkout@v2
         with:
@@ -58,3 +53,8 @@ jobs:
           && git add . \
           && git commit -m "Update packages" \
           && git push origin packages
+
+      - name: Stopping container
+        if: always()
+        run: |
+          docker stop build || true
