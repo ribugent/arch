@@ -19,7 +19,7 @@ jobs:
 
       - name: Start docker container
         id: container
-        run: docker run -d -name build --rm -it -v (pwd):/build --name arch archlinux:base-devel cat
+        run: docker run -d -name build --rm -it -v $(pwd):/build --name arch archlinux:base-devel cat
 
       - name: Setting up container
         run: |
