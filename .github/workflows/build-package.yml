@@ -23,7 +23,7 @@ jobs:
 
       - name: Setting up container
         run: |
-          docker exec -i build pacman -Syu --noconfirm git namcap sudo \
+          docker exec -i build pacman -Syu --noconfirm git namcap \
           && docker exec -i build bash -c "echo ALL ALL=NOPASSWD: /usr/bin/pacman > /etc/sudoers.d/pacman"
 
       - name: Building package
