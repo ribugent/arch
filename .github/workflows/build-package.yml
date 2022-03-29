@@ -28,6 +28,7 @@ jobs:
 
       - name: Building package
         run: |
+          chmod 777 ${{github.event.inputs.package}}
           docker exec -i -u nobody -w /build/${{github.event.inputs.package}} build makepkg -s --noconfirm -f
 
       - name: Stopping container
