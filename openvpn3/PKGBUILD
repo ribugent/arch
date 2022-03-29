@@ -25,6 +25,10 @@ sha256sums=('SKIP')
 
 build() {
   cd "$_pkgname"
+
+  # Fix compilation error
+  sed -i 's:gio-unix-2.0/gio/gunixconnection.h:glib-2.0/gio/gunixsocketaddress.h:g' src/netcfg/netcfg-device.hpp
+
   ./bootstrap.sh
   ./configure --prefix=/usr --sbindir=/usr/bin --sysconfdir=/etc --localstatedir=/var --enable-bash-completion --enable-dco
   make -j $(nproc)
