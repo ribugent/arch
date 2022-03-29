@@ -7,7 +7,7 @@ pkgname=openvpn3
 pkgver=17_beta
 pkgrel=1
 pkgdesc='OpenVPN 3 Linux client'
-arch=('any')
+arch=('x86_64')
 url="https://github.com/OpenVPN/$_pkgname"
 license=('AGPL3')
 depends=('glib2>=2.50' 'jsoncpp>=0.10.5' 'libcap-ng>=0.7.5' 'lz4>=1.7.3' 'util-linux-libs>=2.23.2' 'protobuf' 'python-dbus' 'tinyxml2>=2.1.0')
