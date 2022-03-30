@@ -48,8 +48,10 @@ jobs:
           docker exec -i -w /build/packages/x86_64 build bash -c "repo-add ribugent.db.tar.xz *.pkg.tar.zst"
 
       - name: "Committing packages"
+        working-directory: packages
         run: |
-          cd packages \
+          git config user.name github-actions \
+          && git config user.email github-actions@github.com \
           && git add . \
           && git commit -m "Update packages" \
           && git push origin packages
