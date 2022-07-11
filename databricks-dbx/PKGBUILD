@@ -1,0 +1,32 @@
+# Maintainer: Gerard Ribugent <ribugent <at> gmail <dot> com>
+pkgname=databricks-dbx
+pkgver=0.6.1
+pkgrel=1
+pkgdesc="DataBricks CLI eXtensions - aka dbx is a CLI tool for advanced Databricks jobs management (vendored package)"
+_name=${pkgname#databricks-}
+arch=("x86_64")
+url="https://docs.databricks.com/dev-tools/dbx.html"
+license=('CUSTOM')
+depends=(
+	'python>=3.8'
+	'python-databricks-cli>=0.16.4'
+)
+makedepends=(python-setuptools python-virtualenv)
+source=($pkgname-$pkgver.tar.gz::https://github.com/databrickslabs/dbx/archive/refs/tags/v$pkgver.tar.gz)
+sha512sums=('db9eaf5245edaa2446ef4a7d26ff7fbf860ff27c3d5d0ed2d4ee869a9aae77a51f770c626593c9ceaa6bb9dec9d9a2fe6a0dc479724624eadc28dca27367a0de')
+
+package() {
+    cd "$_name-$pkgver"
+	sed -i -r '/\s+"databricks-cli.+,$/d' setup.py
+
+	virtualenv --clear ${pkgdir}/opt/${pkgname}
+	${pkgdir}/opt/${pkgname}/bin/pip install .
+
+	sed -i "s|${pkgdir}/opt/$pkgname|/opt/${pkgname}|g" ${pkgdir}/opt/${pkgname}/bin/*
+
+	install -d ${pkgdir}/usr/bin/
+	ln -s /opt/${pkgname}/bin/$_name ${pkgdir}/usr/bin/$_name
+
+	install -d "$pkgdir/usr/share/licenses/$pkgname"
+	install -Dm0644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
