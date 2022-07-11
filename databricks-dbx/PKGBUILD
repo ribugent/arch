@@ -17,7 +17,6 @@ sha512sums=('db9eaf5245edaa2446ef4a7d26ff7fbf860ff27c3d5d0ed2d4ee869a9aae77a51f7
 
 package() {
 	cd "$_name-$pkgver"
-	sed -i -r '/\s+"databricks-cli.+,$/d' setup.py
 
 	virtualenv --clear ${pkgdir}/opt/${pkgname}
 	${pkgdir}/opt/${pkgname}/bin/pip install .
