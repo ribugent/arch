@@ -39,6 +39,9 @@ jobs:
           ref: packages
           path: packages
 
+      - name: Cleaning old packages
+        run: rm packages/${{github.event.inputs.package}}*.pkg.tar.zst || true
+
       - name: Copying packages
         run: |
           (cp ${{github.event.inputs.package}}/*-x86_64.pkg.tar.zst packages/x86_64 || true) \
