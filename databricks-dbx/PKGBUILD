@@ -16,7 +16,7 @@ source=($pkgname-$pkgver.tar.gz::https://github.com/databrickslabs/dbx/archive/r
 sha512sums=('db9eaf5245edaa2446ef4a7d26ff7fbf860ff27c3d5d0ed2d4ee869a9aae77a51f770c626593c9ceaa6bb9dec9d9a2fe6a0dc479724624eadc28dca27367a0de')
 
 package() {
-    cd "$_name-$pkgver"
+	cd "$_name-$pkgver"
 	sed -i -r '/\s+"databricks-cli.+,$/d' setup.py
 
 	virtualenv --clear ${pkgdir}/opt/${pkgname}
