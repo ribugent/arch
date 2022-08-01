@@ -1,14 +1,32 @@
-# Description
+# Arch
+## Description
 
-This repository contains my own Arch Linux repository that includes a selection of third party PKGBUILDS and my own ones.
+This repository contains several [Arch Linux](https://archlinux.org/) PKGBUILD's that will fall on these categories:
 
-There are several reasons that I'd include third party on this repository:
+- Own and published in [AUR](https://aur.archlinux.org/)
+- Unpublished in [AUR](https://aur.archlinux.org/) because the might no fit in it
+- Forked from AUR due to several reasons
+  - Removed but I still want to use it
+  - Bug fixed after waiting time
+- Work in progress
 
-- Fix issues that haven't been fixed in the AUR time after it was reported.
-- Own customizations that cannot be included in the AUR.
-- Saving build time
+## Packages
 
-From my own PKGBUILDS, some of them are published in AUR, but some others don't because are designed by my own use cases
-# ⚠️ Disclaimer ⚠️
+| Package | AUR | Unpublished | Fork | WIP |
+|---|:---:|:---:|:---:|:---:|
+| databricks-dbx | | | ✅ | |
+| keepassxc-wordlist-catalan | ✅ | | | |
+| parquet-tools | | ✅ | | |
+| python-azure-core | | | |✅|
+| python-azure-identity | | | |✅|
+| python-azure-mgmt-datafactory | | | |✅|
+| python-azure-storage-blob | | | |✅|
+| python-datadog | | | |✅|
+| python-dbx | | | |✅|
+| python-msal-extensions | | | |✅|
+| python-parquet-tools | ✅ | | | |
 
-Use this repository at your own risk. I'm not responsible for any damage and/or security issues caused by installing any packages.
+
+## ⚠️ Disclaimer ⚠️
+
+Use the PKGBUILD's at your own risk. I'm not responsible for any damage and/or security issues caused by installing any packages.
