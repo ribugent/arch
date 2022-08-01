@@ -1,6 +1,6 @@
-pkgbase = datadogpy
+pkgbase = python-datadog
 	pkgdesc = The Datadog Python library and dogshell
-	pkgver = 0.41.0
+	pkgver = 0.44.0
 	pkgrel = 1
 	url = https://github.com/DataDog/datadogpy
 	arch = any
@@ -8,9 +8,7 @@ pkgbase = datadogpy
 	makedepends = python-setuptools
 	depends = python>=3.5
 	depends = python-requests>=2.6.0
-	provides = datadog-dogshell
-	source = datadogpy-0.41.0.tar.gz::https://github.com/DataDog/datadogpy/archive/refs/tags/v0.41.0.tar.gz
-	sha256sums = e441e81c173413fc05fe9379d6335453d7d1ffbf04c00f18fde16197234dbdfd
+	source = https://files.pythonhosted.org/packages/py2.py3/d/datadog/datadog-0.44.0-py2.py3-none-any.whl
+	sha512sums = 948e52fb1da73e15c4221d03548c03eed64895cbd6f61c7a1eec96d5e64aab7bc8a1711d1340cca75cc3e84744afd9a0faaae692100817c91a6da0afaef947ff
 
-pkgname = datadogpy
-
+pkgname = python-datadog
