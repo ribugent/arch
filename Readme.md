@@ -14,9 +14,9 @@ This repository contains several [Arch Linux](https://archlinux.org/) PKGBUILD's
 
 | Package | AUR | Unpublished | Fork | WIP |
 |---|:---:|:---:|:---:|:---:|
-| databricks-dbx | | | ✅ | |
+| databricks-dbx | | ✅ | | |
 | keepassxc-wordlist-catalan | ✅ | | | |
-| parquet-tools | | ✅ | | |
+| parquet-tools | | ✅ | ✅ | |
 | python-azure-common | | | |✅|
 | python-azure-core | | | |✅|
 | python-azure-identity | | | |✅|
@@ -31,4 +31,4 @@ This repository contains several [Arch Linux](https://archlinux.org/) PKGBUILD's
 
 ## ⚠️ Disclaimer ⚠️
 
-Use the PKGBUILD's at your own risk. I'm not responsible for any damage and/or security issues caused by installing any packages.
+Use the PKGBUILDs at your own risk. I'm not responsible for any damage and/or security issues caused by installing any packages.
