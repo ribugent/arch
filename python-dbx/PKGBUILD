@@ -25,16 +25,16 @@ depends=(
 	"python-cookiecutter>=1.7.2"
 	"python-jinja>=2.11.2"
 )
-makedepends=(python-setuptools)
+makedepends=(python-build python-installer python-wheel)
 source=($pkgname-$pkgver.tar.gz::https://github.com/databrickslabs/dbx/archive/refs/tags/v$pkgver.tar.gz)
-sha512sums=('db9eaf5245edaa2446ef4a7d26ff7fbf860ff27c3d5d0ed2d4ee869a9aae77a51f770c626593c9ceaa6bb9dec9d9a2fe6a0dc479724624eadc28dca27367a0de')
+sha512sums=('ade8d0915330ccf4cffb1f42210ed2bdccf1623fc41fff377553e90f0f648a3292d368017ecb609b963ad8c5a6def33f6c675d932ff803a79211290db132ac93')
 
 build() {
-	cd "$pkgname-$pkgver"
+	cd "$_name-$pkgver"
+	python -m build --wheel --no-isolation
 }
 
 package() {
-	cd "$pkgname-$pkgver"
-	/usr/bin/python setup.py install --root="$pkgdir/"
-	install -Dm0644 LICENSE.txt "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+	cd "$_name-$pkgver"
+	python -m installer --destdir="$pkgdir" dist/*.whl
 }
