@@ -1,0 +1,13 @@
+pkgbase = pyenv-default-packages
+	pkgdesc = Automatically install packages every time you install a new version of Python on pyenv
+	pkgver = 0.3.1
+	pkgrel = 1
+	url = https://github.com/jawshooah/pyenv-default-packages
+	arch = any
+	license = MIT
+	depends = bash
+	depends = pyenv
+	source = https://github.com/jawshooah/pyenv-default-packages/archive/refs/tags/0.3.1.tar.gz
+	sha256sums = b7a77308643b97f327b32f24e9a937c03b04923a17217227a9931cb38f6bb062
+
+pkgname = pyenv-default-packages

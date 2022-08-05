@@ -1,0 +1,41 @@
+# Maintainer: Gerard Ribugent <ribugent <at> gmail <dot> com>
+pkgname=pyenv-default-packages
+pkgver=0.3.1
+pkgrel=1
+pkgdesc="Automatically install packages every time you install a new version of Python on pyenv"
+arch=('any')
+url="https://github.com/jawshooah/pyenv-default-packages"
+license=('MIT')
+depends=('bash' 'pyenv')
+source=("https://github.com/jawshooah/$pkgname/archive/refs/tags/$pkgver.tar.gz")
+sha256sums=('b7a77308643b97f327b32f24e9a937c03b04923a17217227a9931cb38f6bb062')
+
+package() {
+	cd "$srcdir/$pkgname-$pkgver"
+
+	# 1
+	# mkdir -m0755 -p "$pkgdir/usr/lib/pyenv/hooks/$pkgname"
+	# cp -rv {etc,libexec} "$pkgdir/usr/lib/pyenv/hooks/$pkgname"
+	# install -Dm0644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+
+	# PREFIX="$pkgdir/usr/lib/pyenv/hooks/$pkgname" ./install.sh
+
+	PREFIX="$pkgdir/usr" ./install.sh
+
+	# cp LICENSE "$pkgdir"/usr/share/licenses/pyenv-virtualenv
+#   mkdir -p "${pkgdir?}"/{opt/pyenv/plugins/pyenv-virtualenv,usr/bin}
+#   cd "${srcdir?}/$pkgname-$pkgver"
+
+#   # Intall using the script
+#   PREFIX="${pkgdir}/opt/pyenv/plugins/pyenv-virtualenv" ./install.sh
+
+#   # Link binaries
+#   pushd bin &> /dev/null
+#   for bin in *; do
+#       ln -s /opt/pyenv/plugins/pyenv-virtualenv/bin/"$bin" "$pkgdir/usr/bin/$bin"
+#   done
+#   popd &> /dev/null
+
+  # License
+#   mkdir -p "$pkgdir"/usr/share/licenses/pyenv-virtualenv
+}
