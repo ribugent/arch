@@ -4,7 +4,7 @@
 This repository contains several [Arch Linux](https://archlinux.org/) PKGBUILD's that will fall on these categories:
 
 - Own and published in [AUR](https://aur.archlinux.org/)
-- Unpublished in [AUR](https://aur.archlinux.org/) because the might no fit in it
+- Unpublished in [AUR](https://aur.archlinux.org/) (because they might no fit in it)
 - Forked from AUR due to several reasons
   - Removed but I still want to use it
   - Bug fixed after waiting time
