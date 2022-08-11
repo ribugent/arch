@@ -18,16 +18,16 @@ This repository contains several [Arch Linux](https://archlinux.org/) PKGBUILD's
 | keepassxc-wordlist-catalan | ✅ | | | |
 | nodejs-leapp-cli | | | |✅|
 | parquet-tools | | ✅ | ✅ | |
-| python-azure-common | | | |✅|
-| python-azure-core | | | |✅|
-| python-azure-identity | | | |✅|
-| python-azure-mgmt-core | | | |✅|
-| python-azure-mgmt-datafactory | | | |✅|
-| python-azure-mgmt-subscription | | | |✅|
-| python-azure-storage-blob | | | |✅|
-| python-datadog | | | |✅|
-| python-dbx | | | |✅|
-| python-msal-extensions | | | |✅|
+| python-azure-common | ✅ | | | |
+| python-azure-core | ✅ | | | |
+| python-azure-identity | ✅ | | | |
+| python-azure-mgmt-core | ✅ | | | |
+| python-azure-mgmt-datafactory | ✅ | | | |
+| python-azure-mgmt-subscription | ✅ | | | |
+| python-azure-storage-blob | ✅ | | | |
+| python-datadog | ✅ | | | |
+| python-dbx | ✅ | | | |
+| python-msal-extensions | ✅ | | | |
 | python-parquet-tools | ✅ | | | |
 
 ## ⚠️ Disclaimer ⚠️
