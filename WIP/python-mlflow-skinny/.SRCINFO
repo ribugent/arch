@@ -1,0 +1,35 @@
+pkgbase = python-mlflow-skinny
+	pkgdesc = A Lightweight Machine Learning Lifecycle Platform Client
+	pkgver = 1.28.0
+	pkgrel = 1
+	url = A Lightweight Machine Learning Lifecycle Platform Client
+	arch = any
+	license = Apache
+	makedepends = python-build
+	makedepends = python-hatchling
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python>=3.7
+	depends = python-click>=7.0
+	depends = python-click<9
+	depends = python-cloudpickle<3
+	depends = python-databricks-cli>=0.8.7)
+	depends = python-databricks-cli<1
+	depends = python-entrypoints<1
+	depends = python-gitpython>=2.1.0
+	depends = python-gitpython<4
+	depends = python-yaml>=5.1
+	depends = python-yaml<7
+	depends = python-protobuf
+	depends = python-pytz<2023
+	depends = python-requests>=2.17.3
+	depends = python-requests<3
+	depends = python-packaging<22
+	depends = python-importlib-metadata>=3.7.0)
+	depends = python-importlib-metadata<5
+	depends = python-sqlparse>=0.4.0
+	depends = python-sqlparse<1
+	source = https://files.pythonhosted.org/packages/source/m/mlflow-skinny/mlflow-skinny-1.28.0.tar.gz
+	sha512sums = e5fb70448aa8a986acebf906d8f1830384226c4390e7161d5e453051a529b7b6e92f40c905fcc1dc5b70223d3b056195ffd8f13bea0a204e509fe502a01a0360
+
+pkgname = python-mlflow-skinny

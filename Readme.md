@@ -27,6 +27,7 @@ This repository contains several [Arch Linux](https://archlinux.org/) PKGBUILD's
 | python-azure-storage-blob | ✅ | | | |
 | python-datadog | ✅ | | | |
 | python-dbx | ✅ | | | |
+| python-mlflow-skinny | | | | ✅ |
 | python-msal-extensions | ✅ | | | |
 | python-parquet-tools | ✅ | | | |
 

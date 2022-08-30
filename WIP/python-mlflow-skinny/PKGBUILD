@@ -1,0 +1,39 @@
+# Maintainer: Gerard Ribugent <ribugent <at> gmail <dot> com>
+pkgname=python-mlflow-skinny
+_name=${pkgname#python-}
+pkgver=1.28.0
+pkgrel=1
+pkgdesc="A Lightweight Machine Learning Lifecycle Platform Client"
+arch=(any)
+url="A Lightweight Machine Learning Lifecycle Platform Client"
+conflicts=(python-mlflow)
+provides=(python-mlflow)
+license=('Apache')
+depends=(
+	'python>=3.7'
+	'python-click>=7.0' 'python-click<9'
+	'python-cloudpickle<3'
+	'python-databricks-cli>=0.8.7)' 'python-databricks-cli<1'
+	'python-entrypoints<1'
+	'python-gitpython>=2.1.0' 'python-gitpython<4'
+	'python-yaml>=5.1' 'python-yaml<7'
+	'python-protobuf' # 'python-protobuf>=3.12.0' 'python-protobuf<5'
+	'python-pytz<2023'
+	'python-requests>=2.17.3' 'python-requests<3'
+	'python-packaging<22'
+	'python-importlib-metadata>=3.7.0)' 'python-importlib-metadata<5' # 'python-importlib-metadata!=4.7.0'
+	'python-sqlparse>=0.4.0' 'python-sqlparse<1'
+)
+makedepends=(python-build python-hatchling python-installer python-wheel)
+source=("https://files.pythonhosted.org/packages/source/${_name::1}/$_name/$_name-$pkgver.tar.gz")
+sha512sums=('e5fb70448aa8a986acebf906d8f1830384226c4390e7161d5e453051a529b7b6e92f40c905fcc1dc5b70223d3b056195ffd8f13bea0a204e509fe502a01a0360')
+
+build() {
+    cd "$_name-$pkgver"
+    python -m build --wheel --no-isolation
+}
+
+package() {
+    python -m installer --destdir="$pkgdir" $_name-$pkgver/dist/*.whl
+    install -Dm0644 $_name-$pkgver/LICENSE.txt "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
