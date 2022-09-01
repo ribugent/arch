@@ -25,6 +25,7 @@ This repository contains several [Arch Linux](https://archlinux.org/) PKGBUILD's
 | python-azure-mgmt-datafactory | ✅ | | | |
 | python-azure-mgmt-subscription | ✅ | | | |
 | python-azure-storage-blob | ✅ | | | |
+| python-databricks-cli | ✅ | | | |
 | python-datadog | ✅ | | | |
 | python-dbx | ✅ | | | |
 | python-mlflow-skinny | | | | ✅ |
