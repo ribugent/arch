@@ -15,6 +15,7 @@ This repository contains several [Arch Linux](https://archlinux.org/) PKGBUILD's
 | Package | AUR | Unpublished | Fork | WIP |
 |---|:---:|:---:|:---:|:---:|
 | databricks-dbx | | ✅ | | |
+| dell-command-configure | | | ✅ | |
 | keepassxc-wordlist-catalan | ✅ | | | |
 | nodejs-leapp-cli | ✅ | | | |
 | parquet-tools | | ✅ | ✅ | |
