@@ -1,0 +1,27 @@
+pkgbase = python-nile-git
+	pkgdesc = Unofficial Amazon Games client
+	pkgver = r36.fc95890
+	pkgrel = 1
+	url = https://github.com/imLinguin/nile
+	arch = any
+	license = GPL3
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python>=3.8
+	depends = python-requests>=2.27.1
+	depends = python-requests<3.0.0
+	depends = python-pyqt5>=5.15.6
+	depends = python-pyqt5-webengine>=5.15.5
+	depends = python-pyqt5-webengine<6.0.0
+	depends = python-protobuf
+	depends = python-pycryptodome>=3.14.1
+	depends = python-pycryptodome<4.0.0
+	depends = python-zstandard>=0.17.0
+	depends = python-zstandard<1.0.0
+	source = nile::git+https://github.com/imLinguin/nile.git#branch=main
+	source = pyproject.toml
+	sha512sums = SKIP
+	sha512sums = 8a6a02f72e29676ccb203c59fb7e2802833f3f8e09ae6b95f1d4d578fe864e15bdcbb340ec4f69851a30240fee930d413220ce7a99d24c72be2ade72741e4a93
+
+pkgname = python-nile-git
