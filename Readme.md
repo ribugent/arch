@@ -29,6 +29,7 @@ This repository contains several [Arch Linux](https://archlinux.org/) PKGBUILD's
 | python-databricks-cli | ✅ | | | |
 | python-datadog | ✅ | | | |
 | python-dbx | ✅ | | | |
+| python-git-sim | ✅ | | | |
 | python-mlflow-skinny | | | | ✅ |
 | python-msal-extensions | ✅ | | | |
 | python-parquet-tools | ✅ | | | |
