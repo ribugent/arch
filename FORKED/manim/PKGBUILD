@@ -34,7 +34,7 @@ depends=(
 	'python-scipy'
 	'python-setuptools'
 	'python-tqdm'
-	# 'python-watchdog' uses AUR git version while community is OOD
+	'python-watchdog'
 	'python-networkx'
 	# Aur dependencies
 	'python-cloup'
@@ -50,7 +50,6 @@ depends=(
 	'python-skia-pathops'
 	'python-srt'
 	'python-svgelements'
-	'python-watchdog-git'
 )
 makedepends=(
 	'python-setuptools'
