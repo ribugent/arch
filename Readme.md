@@ -17,6 +17,7 @@ This repository contains several [Arch Linux](https://archlinux.org/) PKGBUILD's
 | databricks-dbx | | ✅ | | |
 | dell-command-configure | | | ✅ | |
 | keepassxc-wordlist-catalan | ✅ | | | |
+| manim | | | ✅ | |
 | nodejs-leapp-cli | ✅ | | | |
 | parquet-tools | | ✅ | ✅ | |
 | python-azure-common | ✅ | | | |
