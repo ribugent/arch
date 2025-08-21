@@ -1,6 +1,6 @@
 pkgbase = databricks-cli-bin
 	pkgdesc = Databricks CLI
-	pkgver = 0.264.2
+	pkgver = 0.265.0
 	pkgrel = 1
 	url = https://github.com/databricks/cli
 	arch = x86_64
@@ -10,9 +10,9 @@ pkgbase = databricks-cli-bin
 	provides = databricks-cli
 	conflicts = python-databricks-cli
 	conflicts = python-dbx
-	source_x86_64 = https://github.com/databricks/cli/releases/download/v0.264.2/databricks_cli_0.264.2_linux_amd64.zip
-	sha256sums_x86_64 = cb44529810688338d6a4528a9519f654131751d1b0cbb04b32c94245d83cb669
-	source_aarch64 = https://github.com/databricks/cli/releases/download/v0.264.2/databricks_cli_0.264.2_linux_arm64.zip
-	sha256sums_aarch64 = b691f605bae9e9d0a84efa316c0dfee653399ff3a3306a11c0f637a1a4eb49fb
+	source_x86_64 = https://github.com/databricks/cli/releases/download/v0.265.0/databricks_cli_0.265.0_linux_amd64.zip
+	sha256sums_x86_64 = 23481d93036f801104e30bb9d12c8580219166d221e00f7103340b96c84167db
+	source_aarch64 = https://github.com/databricks/cli/releases/download/v0.265.0/databricks_cli_0.265.0_linux_arm64.zip
+	sha256sums_aarch64 = abf77588a6fe838fa499f01e842f16a4f47db2ba6eabd293aaeb18ca8d71787c
 
 pkgname = databricks-cli-bin
